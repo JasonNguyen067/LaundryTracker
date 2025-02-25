@@ -1,0 +1,80 @@
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Laundry Tracker</h1>
+
+<h2>select a machine to get started...</h2>
+
+<div>
+  <img class=washer data-id="1" src="images/washer.png" style="cursor:pointer;">
+
+  <img class=washer data-id="2" src="images/washer.png" style="cursor:pointer;">
+
+  <img class=washer data-id="3" src="images/washer.png" style="cursor:pointer;">
+
+  <img class=washer data-id="4" src="images/washer.png" style="cursor:pointer;">
+</div>
+
+<div>
+  <img class=dryer data-id="5" src="images/dryer.png" style="cursor:pointer;">
+
+  <img class=dryer data-id="6" src="images/dryer.png" style="cursor:pointer;">
+
+  <img class=dryer data-id="7" src="images/dryer.png" style="cursor:pointer;">
+
+  <img class=dryer data-id="8" src="images/dryer.png" style="cursor:pointer;">
+</div>
+
+<dialog id="machineDialog">
+  <h2 id="machineTitle"></h2>
+  
+  <button style="position:absolute; bottom: 30px; left:34%; height:32px; width: 190px;" id="closeDialog">Close</button>
+
+  <div style="position:relative; left: 20%;">
+
+    <button class="toggle-btn" data-status="in-use">In Use</button>
+    <button class="toggle-btn" data-status="available">Available</button>
+    <button class="toggle-btn" data-status="out-of-order">Out of Order</button>
+  
+  </div>
+  
+
+  <div class="timer">
+    <div class="timer__background">
+      <div class="timer__display">
+        <div class="display minute"></div>
+        <span class="display colon">:</span>
+        <div class="display seconds"></div>
+      </div>
+      <svg class="circle" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 521.17 521.17" style="overflow: visible; enable-background: new 0 0 521.17 521.17">
+        <circle class="st0" cx="260" cy="260" r="253" />
+      </svg>
+    </div>
+    <div class="timer-input">
+      <div class="input__container">
+        <label for="inp-minute">Minutes</label>
+        <input type="text" id="inp-minute" placeholder="0" />
+      </div>
+      <div class="input__container">
+        <label for="inp-seconds">Seconds</label>
+        <input type="text" id="inp-seconds" placeholder="00" />
+      </div>
+    </div>
+    <div class="btn-group">
+      <button class="btn start">Start</button>
+      <div class="pause-resume-cancel none">
+        <button class="btn-lt cancel">Cancel</button>
+        <button class="btn pause-resume">Pause</button>
+      </div>
+    </div>
+  </div>
+
+</dialog>
+
+<script src="script.js"></script>
+
+</body>
+</html>

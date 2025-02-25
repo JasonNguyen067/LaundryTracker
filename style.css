@@ -1,0 +1,244 @@
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h1 {
+  font-size: 100px;
+  margin: 1;
+  padding: 1px;
+  text-align: center;
+  color: rgb(252,107,87)
+  
+}
+
+h2 {
+  font-size: 60px;
+  margin: 1px;
+  padding: 20px;
+  text-align: center;
+  color: rgb(255,207,87)
+
+}
+img.washer, img.dryer {
+  width:250px;
+  height:300px;
+  margin-top: 20px;
+  margin-left:120px;
+  object-fit: contain;
+}
+
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow:0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  width: 500px;
+  height: 550px;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 40px;
+  margin: 10px 0;
+  color: #0056b3;
+}
+
+.toggle-btn {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background-color: green;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;600;700;800&display=swap");
+
+
+:root {
+  --background: #111;
+  --clr-light: #cdcdcd;
+  --clr-primary: #db222a;
+  --clr-remaining: #ffcd00;
+  --background-light: rgb(45, 45, 45);
+  --br: 0.3em;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+}
+
+.timer__background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18rem;
+  height: 18rem;
+  border: 0.5rem solid var(--background-light);
+  border-radius: 50%;
+}
+
+.timer__display {
+  font-weight: 600;
+  font-size: 3.15rem;
+  display: flex;
+}
+
+.display {
+  margin: 0 0.015em;
+}
+
+
+@keyframes popup {
+  0% {
+    transform: scale(0.85);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(0.85);
+  }
+}
+
+.circle {
+  width: 18rem;
+  height: 18rem;
+  position: absolute;
+}
+
+circle {
+  fill: none;
+  stroke: var(--clr-remaining);
+  stroke-width: 18;
+  stroke-dasharray: 1590;
+  stroke-dashoffset: 1590;
+  stroke-linecap: round;
+  transform: rotate(270deg);
+  transform-origin: center;
+  transition: stroke 300ms ease;
+}
+
+@keyframes Loop {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1590;
+  }
+}
+
+.timer-input {
+  display: flex;
+  margin: 2.5em 0 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.input__container {
+  margin: 0 1em;
+}
+
+.timer-input label {
+  display: block;
+  margin: 0.35em 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.timer-input input {
+  outline: 0;
+  width: 8.85rem;
+  height: 3rem;
+  border: 2px solid var(--background-light);
+  border-radius: var(--br);
+  background: transparent;
+  padding: 0.5em;
+  color: var(--clr-light);
+  font: inherit;
+  font-size: 1.15rem;
+}
+
+.none {
+  display: none;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn {
+  width: 9rem;
+  margin: 2em 0 0;
+  padding: 0.55em 1.5em;
+  border: 0;
+  outline: 0;
+  border-radius: var(--br);
+  text-align: center;
+  font: inherit;
+  font-size: 1.15rem;
+  color: var(--clr-light);
+  background: var(--clr-primary);
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: all 75ms ease;
+  color: var(--clr-primary);
+  background: var(--clr-light);
+}
+
+.pause-resume {
+  width: 9rem;
+  padding: 0.55em 1.5em;
+  margin: 2em 0 0 0.5em;
+}
+
+.btn-lt {
+  width: 9rem;
+  margin: 2em 0 0 0.5em;
+  padding: 0.55em 1.5em;
+  border: 1.5px solid var(--clr-primary);
+  outline: 0;
+  border-radius: var(--br);
+  text-align: center;
+  font: inherit;
+  font-size: 1.15rem;
+  color: var(--clr-primary);
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-lt:hover {
+  transition: all 75ms ease;
+  color: var(--clr-light);
+  border-color: var(--clr-light);
+}
